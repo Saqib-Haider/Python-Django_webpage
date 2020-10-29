@@ -1,0 +1,421 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+        background-size: 200% 100% !important;
+        background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%)
+}
+@keyframes move {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 0
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}
+&:hover {
+        background: darken($color-primary, 5%);
+    }
+}
+   &:focus {
+        background: darken(#fff, 3%);
+    }
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --navbar-height:59px;
+}
+
+#navbar{
+    display:flex;
+    align-items: center;
+    position: sticky;
+    top:0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 92%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation bar: Logo and image: */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    height: 60px;
+    margin: 3px 6px;
+}
+
+/* Navigation bar: List Styling: */
+
+#navbar ul{
+    display:flex;
+    font-family: 'Bree Serif', serif;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 3px 22px;
+    border-radius: 20px;
+    color: white;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+}
+
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:3px 200px;
+    height: 578px;
+}
+
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('../img/home1.jpg')
+    height: 100vh;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.81;
+}
+
+#home h1{
+    margin-bottom: 34px;
+    color: #64d84d;
+    text-align: center;
+    text-shadow: 2px 4px 8px black;
+    font-family: 'Bree Serif', serif;
+    opacity: 0.8;
+}
+
+#home p{
+    margin:8px;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 2px 2px 8px white;
+    opacity:0.8;
+}
+
+.btn{
+    padding: 6px 20px;
+    border:2px solid #c49762;
+    margin-top: 50px;
+    background-color: burlywood;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    font-family: 'Bree Serif', serif;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+/* Services Section: */
+
+#services{
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+
+#services-container h1{
+    font-size: 3.2rem;
+    margin-top: 64px;
+    font-family: 'Bree Serif', serif;
+}
+
+#services::before{
+    content: "";
+    position: absolute;
+    background: url('../img/services.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#services .box{
+    border: 2px solid brown;
+    padding:3px;
+    margin:3px 8px;
+    background-color: rgb(229, 229, 229);
+    border-radius: 28px;
+}
+#services .box img{
+    height:160px;
+    display: block;
+    margin: auto;
+}
+/* Client Section */
+
+#client-section{
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('..task/img/client.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.4;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+/* Contact Section */
+#contact{
+    margin-top: 40px;
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../img/contactus.png') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Utility-class */
+.h-primary{
+    font-size: 3.8rem;
+    padding:12px;
+    font-family: 'Bree Serif', serif;
+
+}
+.h-secondary{
+    font-size: 2rem;
+    padding:12px;
+    font-family: 'Bree Serif', serif;
+}
+.center{
+    text-align: center;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(236, 224, 224);
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(90, 87, 81);
+    border-radius: 10px;
+    opacity: 0.5;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a58e;
+    opacity: 0.5;
+  }
+.btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLearning.com</title>
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'task/img/logo.jpg' %}" alt="SchoolLogo">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyLearning</h1>
+        <p>It is the best place to learn technical skills and prepare for exams</p>
+        <p>Improve yourskills and help others.And develop your knowledge online.</p>
+        <form action="add"><a href="join.html"></a><button class="btn">Join Now</button></a></form>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="{% static 'task/img/1.jpg' %}" alt="image">
+                <h2 class="h-secondary center">Maths</h2>
+                <p class="center">Mathematics (from Greek: μάθημα, máthēma, 'knowledge, study, learning') includes the study of such topics as quantity (number theory),structure (algebra), space (geometry),and change (mathematical analysis).It has no generally accepted definition.
+                    Mathematicians seek and use patterns to formulate new conjectures</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'task/img/2.jpg' %}" alt="image">
+                <h2 class="h-secondary center">Science</h2>
+                <p class="center">Science, also widely referred to as Science Magazine, is the peer-reviewed academic journal of the American Association for the Advancement of Science and one of the world's top academic journals. It was first published in 1880, is currently circulated weekly and has a subscriber base of around 130,000.</p>
+            </div>
+            <div class="box">
+                <img src="{% static 'task/img/3.jpg' %}" alt="image">
+                <h2 class="h-secondary center">Engineering</h2>
+                <p class="center">Engineering is the use of scientific principles to design and build machines, structures, and other items, including bridges, tunnels, roads, vehicles, and buildings</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="{% static 'task/img/logo1.png' %}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{% static 'task/img/logo2.png' %}" alt="Our Client">
+            </div>
+
+            <div class="client-item">
+                <img src="{% static 'task/img/logo4.png' %}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{% static 'task/img/logo3.png' %}" alt="Our Client">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <div class="btn-block">
+                        <button type="submit" href="/">Send</button>
+        </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.myLearning.com. All rights reserved!
+        </div>
+    </footer>
+
+
+</body>
+</html>
